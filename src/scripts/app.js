@@ -19919,7 +19919,7 @@ MenuItem = React.createClass({displayName: "MenuItem",
         var $button = this.refs.button.getDOMNode();
 
         window.TweenMax.fromTo($bounce, 0.2, {
-            transformOrigin:"50% 50%"
+            transformOrigin: "50% 50%"
         },{
             delay :delay,
             scaleX: 0.8,
@@ -19999,7 +19999,6 @@ MenuItem = React.createClass({displayName: "MenuItem",
             transform: 'rotate('+ this.props.angle +'deg)'
         };
 
-        //ransform:"rotate("+(angle)+"deg)"
         return (
             /*jshint ignore:start */
             React.createElement("li", {className: "menu-item", style: itemStyle, ref: "menuItem"}, 
@@ -20026,6 +20025,14 @@ Menu = React.createClass({displayName: "Menu",
                 {
                     id: 2,
                     icon: 'trash'
+                },
+                {
+                    id: 3,
+                    icon: 'test'
+                },
+                {
+                    id: 4,
+                    icon: 'item'
                 }
             ]
         };
@@ -20060,17 +20067,20 @@ Menu = React.createClass({displayName: "Menu",
         for(var prop in this.refs){
             var ref = this.refs[prop];
             if(ref.openBubble){
-                this.state.on ? ref.openBubble(i) : ref.closeBubble(i);
+                this.state.on ? ref.closeBubble(i) : ref.openBubble(i);
                 i++;
             }
         }
     },
     render() {
         /*jshint ignore:start */
-        var angle = 180/this.state.menuItems.length;
+        var angle = 180,
+            len = this.state.menuItems.length,
+            slice = 180 / (len-1);
 
         var menuItems = this.state.menuItems.map(function(item, i){
-            var itemAngle = angle/(i+1);
+            var itemAngle = slice * i;
+            console.log(itemAngle);
             return React.createElement(MenuItem, {key: item.id, "data-icon": item.icon, angle: itemAngle, ref: 'menuItem-' + i})
         });
 
