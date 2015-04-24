@@ -1,0 +1,15 @@
+{
+  "name": "react-reflux",
+  "version": "0.0.1",
+  "description": "Experiment with codrops gooey, react, and gulp",
+  "authors": [
+  	"Nick Kelly"
+  ],
+  "dependencies": {
+  	"jquery": "~2.1.0",
+  	"moment": "",
+  	"es5-shim": "",
+  	"es6-shim": "",
+    "reflux": "0.2.7"
+  }
+}

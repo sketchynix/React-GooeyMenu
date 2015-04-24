@@ -1,0 +1,119 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.cf:before, .cf:after {
+  content: '';
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+body {
+  background: #46484a;
+  color: #a8a8a8;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: 'Raleway', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+  outline: none; }
+
+a:hover, a:focus, .codrops-demos a.current-demo {
+  color: #eab1c6;
+  outline: none; }
+
+button:focus {
+  outline: none; }
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; }
+
+.content {
+  text-align: left; }
+
+.info {
+  text-align: center;
+  padding-top: 2.5em;
+  font-size: 0.85em;
+  font-weight: 600; }
+
+.menu {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto 100px;
+  position: relative;
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+
+.menu-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 10px; }
+
+.menu-toggle-button, .menu-item-bounce, .menu-item-button {
+  background: #f59393;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  height: 80px;
+  color: #fff;
+  border: none;
+  outline: none;
+  position: relative; }
+
+.menu-toggle-button {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.menu-toggle-icon {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  line-height: 80px; }
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.menu-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0; }
+
+.menu-item-bounce {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.menu-item-button {
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #AD4C4C; }
+
+.menu-item-button:hover {
+  color: #fff; }
